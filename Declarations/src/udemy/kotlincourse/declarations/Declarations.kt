@@ -1,5 +1,9 @@
 package udemy.kotlincourse.declarations
 
+// type alises let us create shorter ways to use something (to reduce amount of code we write)
+// create type aliases at the top, outside of classes
+typealias EmployeeSet = Set<Employee>
+
 // in IntelliJ, type 'main' and press enter for a shortcut
 fun main(args: Array<String>) {
     // vals are immutable, and can only be assigned once, just like 'final' in Java
@@ -16,6 +20,9 @@ fun main(args: Array<String>) {
 
     // Kotlin recommends to use val whenever possible, and use var only when you need it
     // considered good practice to use val by default (unlike in Java)
+
+    // we use the type alias for a Set<Employee>
+    val employees: EmployeeSet
 
     val employee1 = Employee("Lynn Jones", 500)
     employee1.name = "Lynn Smith"
@@ -34,6 +41,7 @@ fun main(args: Array<String>) {
 
     // the type of a variable is fixed at instantiation, so you can't assign a string to an int variable
     // number = "hello"  <-- error
+
 }
 
 class Employee(var name: String, val id: Int) {
