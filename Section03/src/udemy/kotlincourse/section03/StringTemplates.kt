@@ -1,4 +1,4 @@
-package udemy.kotlincourse.section3
+package udemy.kotlincourse.section03
 
 // Video 23
 
