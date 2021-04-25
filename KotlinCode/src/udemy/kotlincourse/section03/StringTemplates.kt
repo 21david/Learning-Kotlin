@@ -4,6 +4,7 @@ package udemy.kotlincourse.section03
 
 // String templates are basically the syntax that looks like
 // "Hello ${person.name}, your total balance due is $dollars dollars and $cents cents"
+// it uses the $ and ${} syntax
 
 fun main(args: Array<String>) {
     val employee1 = Employee("Lynn Smith", 400)

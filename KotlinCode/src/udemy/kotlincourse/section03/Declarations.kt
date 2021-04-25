@@ -1,5 +1,7 @@
 package udemy.kotlincourse.declarations
 
+// Video 18 and 19
+
 // type alises let us create shorter ways to use something (to reduce amount of code we write)
 // create type aliases at the top, outside of classes
 typealias EmployeeSet = Set<Employee>

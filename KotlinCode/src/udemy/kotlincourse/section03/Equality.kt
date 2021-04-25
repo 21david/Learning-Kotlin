@@ -1,5 +1,7 @@
 package udemy.kotlincourse.equality
 
+// Video 21
+
 fun main(args: Array<String>) {
 
     val employee1 = Employee("Mary", 1)

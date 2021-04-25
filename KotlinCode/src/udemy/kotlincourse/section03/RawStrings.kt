@@ -1,5 +1,7 @@
 package udemy.kotlincourse.section03
 
+// Video 24
+
 fun main(args: Array<String>) {
 
     // Raw strings, aka "triple quoted strings"
