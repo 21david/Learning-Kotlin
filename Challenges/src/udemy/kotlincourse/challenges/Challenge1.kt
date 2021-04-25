@@ -1,5 +1,7 @@
 package udemy.kotlincourse.challenges
 
+// These are the challenges presented in video 26
+
 fun main(args: Array<String>) {
 
     // Challenge 2
@@ -42,5 +44,5 @@ fun main(args: Array<String>) {
                1   11
                1  111
                1 1111""".trimMargin("1"))
-    
+
 }
