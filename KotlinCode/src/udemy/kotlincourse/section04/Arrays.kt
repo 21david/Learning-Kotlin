@@ -4,10 +4,16 @@ package udemy.kotlincourse.section04
 
 fun main(args: Array<String>) {
     // 2 ways to create an arrays: with arrayOf() or with the Array constructor (Array())
+
+    // this is basically equivalent to
+    //      String[] names = {"John", ... };
     val names = arrayOf("John", "Jane", "Jill", "Joe")
 
     val longs1 = arrayOf(1L, 2L, 3L)
     val longs2 = arrayOf<Long>(1, 2, 3, 4, 5)
+    // basically
+    //     long[] longs1 = {1, 2, 3};
+    //     long[] longs2 = {1, 2, 3, 4, 5};
 
     val longsFailed = arrayOf(1, 2, 3, 4, 5, 6) // this actually makes a list of Ints
 
@@ -31,7 +37,7 @@ fun main(args: Array<String>) {
     }
     println()
 
-    // Make a really big array like [0, 1, 2, 3, ... ]
+    // Make a really big array with natural numbers like [0, 1, 2, 3, ... ]
     val bigArray = Array(100000) { i -> i }
     println(java.util.Arrays.toString(bigArray))
 
