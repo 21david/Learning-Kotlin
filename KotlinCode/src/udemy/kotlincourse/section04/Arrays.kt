@@ -1,5 +1,9 @@
 package udemy.kotlincourse.section04
 
+import udemy.kotlincourse.javacode.DummyClass
+import java.math.BigDecimal
+import java.util.*
+
 // Video 29
 
 fun main(args: Array<String>) {
@@ -47,4 +51,53 @@ fun main(args: Array<String>) {
 
     val allFalse = Array(100) { false }
     println(java.util.Arrays.toString(allFalse))
+
+
+    var someArray: Array<Int>
+    someArray = arrayOf(1, 2, 3, 4)
+    for(number in someArray)
+        print("$number ")
+
+    println()
+
+    someArray = Array(6) { i -> (i + 1) * 10}
+    for(number in someArray)
+        print("$number ")
+
+    println()
+
+    // We can have an array with mixed types: Strings, Ints, Booleans, etc.
+    val mixedArray = arrayOf("hello", 22, BigDecimal(10.5), 'a', false)
+    for(element in mixedArray)
+        print("$element  ")
+    println()
+
+    println(mixedArray is Array<Any>)  // true
+
+
+    // In DummyClass.java, we have a method that expects an 'int[]' variable
+    // unlike with primitive types like 'boolean', it won't automatically convert (with boxing/unboxing)
+    // we have to use a method intArrayOf() to create an under-the-cover 'int[]' variable (array of ints)
+    // she said this gives a performance boost too, so use it even if you don't actually need an 'int[]' type
+    val myIntArray = intArrayOf(3, 9, 54, 32, 0, 21)
+    DummyClass().printNumbers(myIntArray)  // this method expects an int[], and it gets one
+
+    // Using IntArray(), we can specify only an initial size, and the elements will be
+    // initialized to 0 by default (because they are integers)
+    var someOtherArray = IntArray(5)
+    println(Arrays.toString(someOtherArray))
+
+
+    // You can convert an Array<Int> to an int[]
+    // use toIntArray()
+    val array: Array<Int> = arrayOf(20, 43, 12, 3, 9, 15, 37, 65, 69)
+    DummyClass().printNumbers(array.toIntArray())
+
+
+    // You can convert an int[] to an Array<Int> as well
+    // use toTypedArray()
+    // I guess int[] in Kotlin is technically IntArray
+    val anIntArray: IntArray = intArrayOf(12, 43, 21, 0, 3, 12, 4, 5)
+    val convertedIntArray: Array<Int> = myIntArray.toTypedArray()
 }
+
