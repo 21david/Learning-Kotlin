@@ -21,9 +21,9 @@ fun main(args: Array<String>) {
 
     val longsFailed = arrayOf(1, 2, 3, 4, 5, 6) // this actually makes a list of Ints
 
-    println(longs1 is Array<Long>)
-    println(longs2 is Array<Long>)
-    println(longsFailed is Array<Int>)
+    println(longs1 is Array<Long>)  // true
+    println(longs2 is Array<Long>)  // true
+    println(longsFailed is Array<Int>)  // true
 
 
     println(longs1[0])
@@ -81,11 +81,13 @@ fun main(args: Array<String>) {
     // she said this gives a performance boost too, so use it even if you don't actually need an 'int[]' type
     val myIntArray = intArrayOf(3, 9, 54, 32, 0, 21)
     DummyClass().printNumbers(myIntArray)  // this method expects an int[], and it gets one
+    println(myIntArray is IntArray)  // true
 
     // Using IntArray(), we can specify only an initial size, and the elements will be
-    // initialized to 0 by default (because they are integers)
+    // initialized to 0 by default, just like in Java (because they are integers)
     var someOtherArray = IntArray(5)
     println(Arrays.toString(someOtherArray))
+    println(someOtherArray is IntArray)  // true
 
 
     // You can convert an Array<Int> to an int[]

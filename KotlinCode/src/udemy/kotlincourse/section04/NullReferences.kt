@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
         // Kotlin compiler only lets us use certain methods if we
         // have already checked that an object is not null
         // kinda similar to smart casting
-        println(str2.toUpperCase())
+        println(str2.toUpperCase())  // THIS ISN'T NULL
     }
 
 
@@ -41,10 +41,10 @@ fun main(args: Array<String>) {
 
     // it's shorthand that reduces lines of code by a lot
 
-    // if the first ? results in null, nothing else gets executed, so this would
+    // if the first ? results in null, nothing else gets  (like a short-circuit), so this would
     // be a safe thing to do:
     // val countryCode: Int? = bankBranch?.address?.country?.countryCode?.code
-    // in Java, you would need many if statements
+    // in Java, you would need many if statements for this
 
 
     // The Elvis operator:
@@ -53,7 +53,7 @@ fun main(args: Array<String>) {
     val nullString: String? = null
     var maybeNull = nullString ?: "Default value if it was null"
 
-    println(maybeNull)
+    println(maybeNull)  // prints "Default value if it was null"
 
     // So the Elvis operator boils down to:
     if (nullString == null) {
@@ -69,13 +69,13 @@ fun main(args: Array<String>) {
     val something: Any = arrayOf(1, 2, 3, 4)
     val str3 = something as? String  // this can't work (casting IntArray to String), so it gets 'null'
 
-    println(str3)
+    println(str3)  // prints null
 
     // if we use the 'as?' syntax, the value (str3 above) will be nullable
     // so str3 will be of type String?
     // meaning we have to use ? syntax for that variable forever
 
-    println(str3?.toUpperCase())
+    println(str3?.toUpperCase())  // prints null
 
 
 
