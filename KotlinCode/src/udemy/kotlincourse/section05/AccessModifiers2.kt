@@ -11,34 +11,25 @@ fun main(args: Array<String>) {
     // internal is for modules
     // something marked as 'internal' can be seen from anywhere in the same module
 
-    val emp = Employee("Buck")
+    val emp = Employee2("Buck")
     emp.fullTime = false
     println(emp.firstName)
     println(emp.fullTime)
 
-    val emp2 = Employee("Samantha")
+    val emp2 = Employee2("Samantha")
     println(emp2.firstName)
     println(emp2.fullTime)
 
-    val emp3 = Employee("Jane", false)
+    val emp3 = Employee2("Jane", false)
     println(emp3.firstName)
     println(emp3.fullTime)
 
 }
 
-// no matching requirement between file name and class names
-// so you can have as many public classes as you want in Kotlin
-
-// in Kotlin, you can have a private class (unlike in Java)
-
-// this class is visible ONLY to this file
-private class Example {
-
-}
 
 // this class has a 'primary constructor' since it is defined
 // in the same line as the class name
-class Employee(val firstName: String, fullTime: Boolean = true) {
+class Employee2(val firstName: String, fullTime: Boolean = true) {
 
     // how to write custom getters and setters:
     var fullTime = fullTime
@@ -54,11 +45,3 @@ class Employee(val firstName: String, fullTime: Boolean = true) {
     }
 }
 
-
-class Demo {
-    val dummy: String
-
-    constructor() {
-        dummy = "Hello"
-    }
-}
