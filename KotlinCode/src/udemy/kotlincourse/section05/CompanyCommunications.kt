@@ -1,4 +1,4 @@
-// Video 45, 46
+// Video 45, 46, 47
 
 package academy.learnprogramming.inheritance
 
@@ -19,6 +19,21 @@ fun main(args: Array<String>) {
 
     // can't do this
     // val someClass3 = SomeClass()
+
+    var thisIsMutable = 45
+
+    // Anonymous objects
+    // create a class definition on-the-fly and implement the required function
+    //Unlike in Java, this code can access local variables in this method
+    // and you could add on more interfaces to this anonymous object too
+    wantsSomeInterface(object: SomeInterface {
+        override fun mustImplement(num: Int): String {
+            thisIsMutable++
+            return "$num ${num+1} ${num+2}"
+        }
+    })
+
+    println(thisIsMutable)
 }
 
 // this class is for a singleton object
@@ -62,5 +77,14 @@ class SomeClass private constructor(val someString: String) {
         println("I'm accessing privateVar: $privateVar")
     }
     */
+}
+
+
+interface SomeInterface {
+    fun mustImplement(num: Int): String
+}
+
+fun wantsSomeInterface(si: SomeInterface) {
+    println("Calling from wantsSomeInterface: ${si.mustImplement(22)}")
 }
 
