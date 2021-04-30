@@ -1,6 +1,6 @@
 // Video 45, 46, 47
 
-package academy.learnprogramming.inheritance
+package udemy.kotlincourse.section05
 
 import java.time.Year
 
@@ -88,3 +88,5 @@ fun wantsSomeInterface(si: SomeInterface) {
     println("Calling from wantsSomeInterface: ${si.mustImplement(22)}")
 }
 
+
+fun topLevelFunction(str: String) = println("Top level function: $str")
