@@ -13,8 +13,6 @@ fun main(args: Array<String>) {
 // this one has a primary constructor (takes in no arguments)
 abstract class Printer3(val modelName: String) {
 
-
-
     // for this function to be able to be overridden, it needs 'open' keyword
     open fun printModel() = println("The model name of this printer is $modelName.")
 
