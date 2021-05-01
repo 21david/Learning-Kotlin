@@ -116,10 +116,19 @@ fun main(args: Array<String>) {
     println("--------------------")
 
     // you can name loops (like in Java)
-    // syntax in Java is "aSpecificLoop: [loop]"
-    //    and "break aSpecificLoop;" or "continue aSpecificLoop;"
-    // syntax in Kotlin is "aSpecificLoop@ [loop]"
-    //    and "break@aSpecificLoop" or "continue@aSpecificLoop"
+    // syntax in Java is
+    //      aSpecificLoop:
+    //      [loop code ...]
+    // and break/continue:
+    //      break aSpecificLoop;
+    //      continue aSpecificLoop;
+
+    // syntax in Kotlin is
+    //      aSpecificLoop@
+    //      [loop code ...]
+    // and break/continue:
+    //      break@aSpecificLoop
+    //      continue@aSpecificLoop
     for(i in 1..3) {
         println("i = $i")
 
