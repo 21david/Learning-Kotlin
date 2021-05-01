@@ -6,6 +6,7 @@ class Solution {
         Time complexity could be drastically improved
         Instead of pushing everything back with inner for loop,
         we could use a different data structure (maybe a linked list)
+        (Barely have experience with Kotlin)
         */
         
         val target: IntArray = Array(nums.size) {-1}.toIntArray()
