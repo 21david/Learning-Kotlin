@@ -14,9 +14,9 @@ fun main(args: Array<String>) {
 
     var num = 0
 
-    // best practice is for the when expression to return the same type in all cases
+    // best practice is for the 'when' expression to return the same type in all cases
     // but it is possible to mix them
-    // all of these cases return strings
+    // in this one, all of these cases return strings
     val str = when(timeOfYear) {
         Season.SPRING -> {
             num += 5
@@ -49,4 +49,24 @@ fun main(args: Array<String>) {
         num2 > num1 -> println("num2 > num1")
         else -> println("num1 == num2")
     }
+
+
+    // experiments
+    // works with Strings
+    var aName: String = "Joseph McSanchez"
+    when(aName) {
+        "Joseph" -> println("Hi Joseph")
+        "Melinda" -> println("Hi melinda")
+        "Joseph McSanchez" -> println("Hi Joseph McSanchez")
+        else -> println("Hi there")
+    }
+
+    aName = "Joseph"
+    when(aName) {
+        in "J".."L" -> println("Your counselor is Ms. Balchez")
+        in "M".."P" -> println("Your counselor is Mr. Primp")
+        else -> println("Your counselor is Mrs. Sasana")
+    }
+
+
 }

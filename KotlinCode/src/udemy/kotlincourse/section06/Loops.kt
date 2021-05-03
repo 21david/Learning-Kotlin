@@ -23,14 +23,14 @@ fun main(args: Array<String>) {
     val strRange = "ABC".."XYZ"
 
     // use 'in' to check if something is inside a range
-    println(4 in range)
-    println('g' in charRange)
-    println("DAV" in strRange)
+    println(4 in range)  // true
+    println('g' in charRange)  // true
+    println("DAV" in strRange)  // true
 
-    // this prints true because the string is < the last string in strRange
-    // "CCCCCC" < "XYZ" (lexicographically)
-    println("CCCCCC" in strRange)
-    println("ZZZZZZ" in strRange)
+    // this prints true because the string is < the last string in strRange (lexicographically)
+    // "CCCCCC" < "XYZ"
+    println("CCCCCC" in strRange)  // true
+    println("ZZZZZZ" in strRange)  // false
 
     val backwardRange = 5.downTo(1)
 
@@ -77,7 +77,7 @@ fun main(args: Array<String>) {
     val name = "david espinosa"
     val nameRange = 0..name.length-1
     for(c in nameRange)
-        print("${name[c]} ")
+        print("${name[c]} ")  // access characters in a string by index with [] notation
     println(".")
 
     for(i in 0 until name.length)
