@@ -43,6 +43,8 @@ fun main(args: Array<String>) {
         println(num)
     }
 
+    // this says "run the 'topLevel' function"
+    // topLevel cannot have any parameters
     run(::topLevel)
 }
 
