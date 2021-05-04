@@ -75,6 +75,8 @@ class Car(val color: String, val model: String, val year: Int) {
     operator fun component1() = color
     operator fun component2() = model
     operator fun component3() = year
+
+    override fun toString() = "Car(color=${this.color}, model=${this.model}, year=${this.year})"
 }
 
 data class DataClassCar(val color: String, val model: String, val year: Int) {}
