@@ -414,7 +414,7 @@ fun main(args: Array<String>) {
 
     I will probably be using
         mutableListOf(), mutableSetOf(), hashSetOf(), mutableMapOf(),
-        and hashMapOf()
+        and hashMapOf() 
     most of the time
     */
 }
