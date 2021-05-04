@@ -107,6 +107,5 @@ fun main(args: Array<String>) {
     println(cars.sortedBy { it.year }) // sort our cars by the year
     println(cars.sortedBy { it.model }) // sort by the model
 
-
 }
 
