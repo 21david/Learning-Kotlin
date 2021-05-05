@@ -39,7 +39,7 @@ fun main(args: Array<String>) {
     // make a list of pairs of first names and last names, w/out using a loop
     println(immutableMap1.map { it.value.firstName }.zip(immutableMap1.keys))
 
-    // Sarah's solutiond
+    // Sarah's solution
     val namePairs = immutableMap1.map { Pair(it.value.firstName, it.value.lastName) }
     println(namePairs)
 
