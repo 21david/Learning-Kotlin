@@ -71,3 +71,29 @@ fun <T> List<T>.printCollectionExtension() {
 data class Vehicle(val color: String, val type: String, val price: Double) {}
 
 fun line(txt: String) = println("--- $txt -------------------")
+
+// is this poetry?
+fun ction(that: takes): a = parameter()
+fun with(syntax: and): playing = with(words())
+fun n.y(just: how): far = this.can(go())
+fun tricks(): to { do { with (code. and (syntax))} while (bored()); or(); return to ("work")}
+
+class takes {}
+class a {}
+class and {
+    fun and(obj: and) = and()
+}
+class playing {}
+fun parameter(): a = a()
+fun words(): and = and()
+class n {
+    fun can(obj: Any): far = far()
+}
+class how {}
+class far {}
+fun go() = Any()
+class to(str: String) {}
+val code: and = and()
+val syntax: and = and()
+fun bored() = false
+fun or() {}

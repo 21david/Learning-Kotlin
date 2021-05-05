@@ -49,6 +49,7 @@ fun <T: Number> convertToInt(collection: List<T>) {
         println("${num.toInt()}")  // because T is a Number, we can call .toInt() safely
 }
 
+// 'where' keyword used to specify what parent classes and implemented interfaces a type must have
 // whatever T is, it has to be a subclass (or implement) all types after 'where'
 // so it has to be a CharSequence and an Appendable
 fun <T> append(item1: T, item2: T) where T: CharSequence, T: Appendable {

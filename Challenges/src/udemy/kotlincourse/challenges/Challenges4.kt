@@ -86,10 +86,4 @@ fun main(args: Array<String>) {
 
     println(dnum2)
 
-    val dnum2: Double
-    println(dnum2 = when {
-        num > 100 -> -234.567
-        num < 100 -> 4444.555
-        else -> 0.0
-    })
 }

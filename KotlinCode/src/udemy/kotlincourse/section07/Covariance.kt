@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
 
     fun acceptInvariantType(obj: GardenInvariant<Flower>) {}
 
-    val object1 = GardenInvariant<Rose>()
+    val object1 = GardenInvariant<Rose>(Rose())
     // acceptInvariantType(object1) // error
 
     /****************************************/
@@ -62,7 +62,7 @@ class Rose: Flower() {}
 // need a garden of Flowers (not Roses, Daisies, etc.)
 // So we can only accept Garden<Flower> and not Garden<Rose>, etc..
 // (see acceptInvariantType() in main method)
-class GardenInvariant<T: Flower> {
+class GardenInvariant<T: Flower>(val something: T) {
 
 }
 
