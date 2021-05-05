@@ -5,7 +5,7 @@ package udemy.kotlincourse.section07
 import java.math.BigDecimal
 
 fun main(args: Array<String>) {
-    // in Kotlin, unlike in Java, you have to provide type for the generics part
+    // in Kotlin, unlike in Java, you have to provide type for the generics part (MutableList<String>)
     val list: MutableList<String> = mutableListOf("Hello")
     list[0].toUpperCase()
     list += "Greetings"

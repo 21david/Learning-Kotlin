@@ -33,6 +33,12 @@ fun main(args: Array<String>) {
 
 // contravariance is the opposite of covariance. this time, we want to accept
 // the given type, OR any supertypes
+// FlowerCare<T> is contravariant (see it's declaration at the bottom)
+// so since this constructor accepts a FlowerCare<T>, it can accept any supertype as well, because
+// FlowerCare is contravariant. Example: it could take a FlowerCare<Flower>, FlowerCare<Rose>, FlowerCare<Daisy>, etc.
+// whereas List<T> can only take T or subtypes (List<T> is covariant)
+// for example, if Garden is declared as Garden<Rose>, then it can only take List<Rose> or List<[subclass of rose]>,
+// but not List<Flower> (see commented code at the bottom in main())
 class Garden<T: Flower>(val flowers: List<T>, val flowerCare: FlowerCare<T>) {
 
     fun pickFlower(i: Int) = flowers[i]
@@ -49,6 +55,7 @@ class Rose: Flower("🌹") {}
 class Daffodil: Flower("🌼") {}
 
 // 'in' gives it 'contravariance'
+// now FlowerCare<T> is contravariant
 interface FlowerCare<in T> {
     fun prune(flower: T)
 

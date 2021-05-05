@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
     fun acceptInvariantType(obj: GardenInvariant<Flower>) {}
 
     val object1 = GardenInvariant<Rose>(Rose())
-    // acceptInvariantType(object1) // error
+ // acceptInvariantType(object1)  // error
 
     /****************************************/
 
@@ -55,7 +55,9 @@ fun waterGarden(garden: Garden<Flower>) {}
 
 open class Flower {}
 
-class Rose: Flower() {}
+open class Rose: Flower() {}
+
+class PinkRose: Rose() {}
 
 // this class is invariant
 // meaning, if we ask for a garden of Flowers in a function signature, we strictly
