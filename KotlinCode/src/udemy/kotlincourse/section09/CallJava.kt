@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
     // if you try to get a variable that is not annotated in the Java file,
     // it will return a ! type. For example, getColor() return type in Car.java is not annotated
     // so doing this gives us a "String!":
-    val color: Int = car.color
+//  val color: Int = car.color
 
 }
 
