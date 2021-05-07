@@ -114,7 +114,7 @@ class Person(val firstName: String, val lastName: String, val age: Int) {
 // a Premium paper to the box (we would be mixing types, when the Box should only contain Regular papers)
 class Box<out T> {
 
-    // convariance contranints:
+    // convariance contraints:
     // legal:
     fun takePaper(): T {}  // T is in the 'out' position
 
