@@ -116,7 +116,7 @@ class Box<out T> {
 
     // convariance contraints:
     // legal:
-    fun takePaper(): T {}  // T is in the 'out' position
+//  fun takePaper(): T { /* return something of type T */ }  // T is in the 'out' position
 
     // illegal:
 //  fun addPaper(paper: T) {}  // T is in the 'in' position
